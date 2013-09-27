@@ -1,0 +1,23 @@
+#!bin/bash
+
+Error(){
+echo "Error.Sintaxis de uso:$O / archivo | directorio"
+}
+        if test $# -lt 1
+                then
+        Error
+        elif test -d $1
+                then
+                echo "$1 es un directorio y su tamaño es:"
+	du -hs $1
+        elif test -f $1
+                then
+                echo "$1 es un archivo y su tamaño es:"
+	du -hs $1
+        else
+                echo "$1 no existe"
+        fi
+
+
+
+

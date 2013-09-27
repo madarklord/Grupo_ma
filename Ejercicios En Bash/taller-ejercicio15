@@ -1,0 +1,11 @@
+#!/bin/sh
+#dividir un archivo
+echo -n "Digite el archivo a unir : "
+read OBJETO 
+echo "se va a dividir el archivo $OBJETO "
+echo -n "Digite el nombre a guardar la union : "
+read OBJETO2
+
+sudo cat "$OBJETO"* > $OBJETO2
+
+

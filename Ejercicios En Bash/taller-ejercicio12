@@ -1,0 +1,18 @@
+#!/bin/bash
+#saber si es letra,numero o especial
+
+echo -n "Digite una tecla: "
+read OBJETO
+
+c=`echo "$OBJETO" |grep [[:alpha:]]`
+d=`echo "$OBJETO" |grep [[:digit:]]`
+
+if [ "$OBJETO" == "$c" ]; then
+	echo "es una letra"
+else
+	if [ "$OBJETO" == "$d" ]; then
+        echo "es un numero"
+	else
+	echo "es un caracter especial"
+	fi
+fi

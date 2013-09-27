@@ -1,0 +1,17 @@
+#!bin/bash
+
+read -p "Introduce un numero : " NUMERO
+
+let RESTO=NUMERO%2
+
+	if [ $RESTO -eq 0 ]; then
+ 
+	echo "El numero $NUMERO es par"
+
+	else
+
+	echo "El numero $NUMERO es impar"
+
+fi
+
+

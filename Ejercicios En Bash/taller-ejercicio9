@@ -1,0 +1,11 @@
+#!/bin/sh
+#crear archivo segun el usu diga
+
+filename="archivo_nuevo_vacio-$(date +%Y%m%d)"
+username="$(whoami)"
+echo -n "Digite en cuantos bytes quiere el fichero: "
+read OBJETO 
+echo "Digito $OBJETO bytes"
+
+
+sudo dd if=/home/$username/ |pv|dd of=$filename bs=$OBJETO count=$OBJETO

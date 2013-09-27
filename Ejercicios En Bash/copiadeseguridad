@@ -1,0 +1,6 @@
+#!bin/bash
+
+"crontab -e"
+
+*/5* * * * /home/madarklord/10
+cp -r /home/madarklord/ /home/madarlork/backup_$(date+%H%M%S)

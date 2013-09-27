@@ -1,0 +1,25 @@
+#!/bin/bash
+#contar vocales y consonantes
+ 
+ 
+echo -n "Digite la palabra a contar: "
+read OBJETO
+ 
+c=`echo $OBJETO | wc -m`
+c2=$[ $c - 1 ]
+ 
+echo "Total de caracteres: $c2"
+cv=0
+cc=0
+while [ $c2 -gt 0 ]; do
+        num=`echo $OBJETO | cut -c $c2`
+        echo "aqui sale la letra fragmentada: $num"
+        if [ $num == 'a' -o $num == 'e' -o $num == 'i' -o $num == 'o' -o $num == 'u' ]; then
+                cv=$[ $cv + 1 ]
+        else
+                cc=$[ $cc + 1]
+fi
+        c2=$[ $c2 - 1 ]
+done
+ 
+echo "Total vocales: $cv , Total consonantes: $cc"

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+clear
+echo “Mi IP es: ” $( ifconfig eth0 | grep "Direc. inet" | cut -d ":" -f 2 | cut -d "" -f 1 )

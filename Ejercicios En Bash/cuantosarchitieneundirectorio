@@ -1,0 +1,17 @@
+#!bin/bash
+
+Error(){
+echo "Error.No se proporcionaron argumentos."
+echo "$O nombre_directorio"
+}
+	if test $# -lt 1
+		then Error
+	elif test -f $1
+		then echo "Error.$1 no es un directorio." echo "$O nombre_directorio"
+	elif test -d $1
+		then cd $1
+	file *
+	else echo "Error.$1 no es ni directorio ni archivo."
+		echo "$O nombre_directorio"
+
+	fi
